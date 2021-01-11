@@ -9,7 +9,7 @@ const Navbox = () => {
       <Container fluid className="nav-container">
         <Row>
           <Col md="10" className="mx-auto">
-            <Navbar>
+            <Navbar expand="sm">
               <Navbar.Brand href="#home">3GAG</Navbar.Brand>
               <Navbar.Toggle aria-controls="basic-navbar-nav" />
               <Navbar.Collapse id="basic-navbar-nav">

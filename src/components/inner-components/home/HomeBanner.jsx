@@ -1,7 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
+import "react-responsive-modal/styles.css";
+import { Modal } from "react-responsive-modal";
+import Account from "../Account";
 
 const HomeBanner = () => {
+  const [open, setOpen] = useState(false);
+
+  const onOpenModal = () => setOpen(true);
+  const onCloseModal = () => setOpen(false);
   return (
     <>
       <Container fluid>
@@ -11,7 +18,10 @@ const HomeBanner = () => {
               <div className="heading text-center">
                 <span>3GAG</span>
                 <p> Gadgets for lifestyle </p>
-                <button> Sign In </button>
+                <button onClick={onOpenModal}> Sign In </button>
+                <Modal open={open} onClose={onCloseModal} center>
+                  <Account />
+                </Modal>
               </div>
             </div>
           </Col>

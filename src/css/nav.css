@@ -45,6 +45,15 @@
   animation-fill-mode: backwards;
 }
 
+.nav-container .navbar-toggler {
+  outline: none;
+}
+
+.nav-container .navbar-toggler-icon {
+  background-color: #803b26;
+  padding: 1.2rem !important;
+}
+
 @keyframes border-in {
   from {
     width: 0%;
@@ -61,5 +70,19 @@
   to {
     width: 0%;
     border-bottom-color: var(--brown-color);
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .nav-container .navbar-nav {
+    margin: 1rem 0 !important;
+  }
+
+  .nav-container .navbar-nav a {
+    margin: 0 !important;
+  }
+
+  .nav-container .navbar-nav a::before {
+    display: none;
   }
 }

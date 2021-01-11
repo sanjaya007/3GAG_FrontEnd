@@ -20,6 +20,7 @@ p {
 /* all css */
 @import "./css/nav.css";
 @import "./css/home.css";
+@import "./css/account.css";
 @import "./css/footer.css";
 
 /* common css */
