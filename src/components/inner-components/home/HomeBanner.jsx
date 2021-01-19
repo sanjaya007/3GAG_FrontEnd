@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import "react-responsive-modal/styles.css";
 import { Modal } from "react-responsive-modal";
-import Account from "../Account";
+import { Account } from "../Account";
 
 const HomeBanner = () => {
   const [open, setOpen] = useState(false);
