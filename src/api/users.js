@@ -27,13 +27,14 @@ const loginUsers = (value, callBack) => {
   };
 
   axios
-    .post(URL, data)
+    .post(URL, data, { withCredentials: true, credentials: "include" })
     .then((response) => {
       callBack(response);
     })
     .catch((error) => {
       console.log(error);
     });
+  // axios.defaults.withCredentials = true;
 };
 
 export { registerUsers, loginUsers };

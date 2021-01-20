@@ -1,14 +1,17 @@
 import React from "react";
 import { Col, Container, Nav, Navbar, Row } from "react-bootstrap";
+import ExitToAppIcon from "@material-ui/icons/ExitToApp";
+import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
+import AccountCircleIcon from "@material-ui/icons/AccountCircle";
 import "../css/nav.css";
 
-const Navbox = () => {
+const AfterNav = () => {
   return (
     <>
       <Container fluid className="nav-container">
         <Row>
           <Col md="10" className="mx-auto">
-            <Navbar expand="sm">
+            <Navbar expand="lg">
               <Navbar.Brand href="#home">3GAG</Navbar.Brand>
               <Navbar.Toggle aria-controls="basic-navbar-nav" />
               <Navbar.Collapse id="basic-navbar-nav">
@@ -23,6 +26,17 @@ const Navbox = () => {
                     Gadgets
                   </Nav.Link>
                 </Nav>
+                <Nav className="ml-auto">
+                  <Nav.Link className="after-link" href="#home">
+                    Profile <AccountCircleIcon />
+                  </Nav.Link>
+                  <Nav.Link className="after-link" href="#link">
+                    Your Cart <ShoppingCartIcon />
+                  </Nav.Link>
+                  <Nav.Link className="after-link" href="#link">
+                    Log Out <ExitToAppIcon />
+                  </Nav.Link>
+                </Nav>
               </Navbar.Collapse>
             </Navbar>
           </Col>
@@ -32,4 +46,4 @@ const Navbox = () => {
   );
 };
 
-export default Navbox;
+export default AfterNav;

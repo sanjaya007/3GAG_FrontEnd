@@ -16,7 +16,6 @@ const Register = (props) => {
     errMessage: "",
   });
 
-  console.log(errData);
   errData.statusMsg === "succcess"
     ? props.functionName()
     : console.log("error");
@@ -50,7 +49,7 @@ const Register = (props) => {
           Get Started and <span>Enjoy !</span>
         </h1>
         <Form onSubmit={handleSubmit}>
-          <Form.Text className="text-danger error-text">
+          <Form.Text className="text-danger error-text-top">
             {errData.errKey === null ? errData.errMessage : ""}
           </Form.Text>
           <Form.Group controlId="firstname">

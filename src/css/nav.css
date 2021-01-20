@@ -13,7 +13,7 @@
 .nav-container .navbar-nav {
   margin-left: 100px !important;
 }
-.nav-container .navbar-nav a {
+.nav-container .navbar-nav .main-link {
   position: relative;
   font-size: 1.1rem;
   font-weight: 700;
@@ -24,7 +24,7 @@
   letter-spacing: 0.1em;
 }
 
-.nav-container .navbar-nav a::before {
+.nav-container .navbar-nav .main-link::before {
   content: "";
   position: absolute;
   top: 0;
@@ -35,12 +35,12 @@
   border-bottom: 1px solid var(--white-color);
 }
 
-.nav-container .navbar-nav a:hover::before {
+.nav-container .navbar-nav .main-link:hover::before {
   animation: border-in 1s ease;
   animation-fill-mode: forwards;
 }
 
-.nav-container .navbar-nav a:not(hover)::before {
+.nav-container .navbar-nav .main-link:not(hover)::before {
   animation: border-out 1s ease;
   animation-fill-mode: backwards;
 }
@@ -52,6 +52,20 @@
 .nav-container .navbar-toggler-icon {
   background-color: #803b26;
   padding: 1.2rem !important;
+}
+
+.nav-container .navbar-nav .after-link {
+  font-size: 1.1rem;
+  font-weight: 700;
+  padding: 0.5rem 0 !important;
+  color: var(--white-color) !important;
+  text-transform: uppercase;
+  margin: 0 10px !important;
+  letter-spacing: 0.1em;
+}
+
+.nav-container .navbar-nav .after-link svg {
+  font-size: 2rem;
 }
 
 @keyframes border-in {
@@ -78,11 +92,11 @@
     margin: 1rem 0 !important;
   }
 
-  .nav-container .navbar-nav a {
+  .nav-container .navbar-nav .main-link {
     margin: 0 !important;
   }
 
-  .nav-container .navbar-nav a::before {
+  .nav-container .navbar-nav .main-link::before {
     display: none;
   }
 }

@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { Form, Button } from "react-bootstrap";
 import { loginUsers } from "../../api/users";
+import { useDispatch } from "react-redux";
+// import loggedInAction from "../../actions/loggedIn";
 
 const Login = (props) => {
   const [input, setInput] = useState({
@@ -12,6 +14,15 @@ const Login = (props) => {
     statusMsg: "",
     errMessage: "",
   });
+
+  const dispatch = useDispatch();
+
+  if (errData.statusMsg === "success") {
+    dispatch({ type: "IS_LOGGED_IN" });
+    {
+      props.closeModal();
+    }
+  }
 
   const handleInput = (e) => {
     const { name, value } = e.target;
@@ -42,7 +53,7 @@ const Login = (props) => {
           Login And Get <span>Started</span>
         </h1>
         <Form onSubmit={handleSubmit}>
-          <Form.Text className="text-danger error-text">
+          <Form.Text className="text-danger error-text-top">
             {errData.errMessage !== "" ? errData.errMessage : ""}
           </Form.Text>
           <Form.Group controlId="formBasicEmail">

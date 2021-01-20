@@ -20,7 +20,7 @@ const HomeBanner = () => {
                 <p> Gadgets for lifestyle </p>
                 <button onClick={onOpenModal}> Sign In </button>
                 <Modal open={open} onClose={onCloseModal} center>
-                  <Account />
+                  <Account closeModal={onCloseModal} />
                 </Modal>
               </div>
             </div>

@@ -3,7 +3,7 @@ import "../../css/account.css";
 import Login from "./Login";
 import Register from "./Register";
 
-const Account = () => {
+const Account = (props) => {
   const [form, setForm] = useState(false);
 
   const toggleForm = () => {
@@ -12,7 +12,7 @@ const Account = () => {
   return (
     <>
       {form ? (
-        <Login functionName={toggleForm} />
+        <Login functionName={toggleForm} closeModal={props.closeModal} />
       ) : (
         <Register functionName={toggleForm} />
       )}
